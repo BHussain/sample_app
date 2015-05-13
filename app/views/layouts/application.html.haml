@@ -1,9 +1,34 @@
-%head
-  %title
-    = full_title(yield(:title))
-  = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true 
-  = javascript_include_tag 'application', 'data-turbolinks-track' => true 
-  = csrf_meta_tags 
-%body 
-=yield 
+%html
+  %head
+    %title
+      = full_title(yield(:title))
+      = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true 
+      = javascript_include_tag 'application', 'data-turbolinks-track' => true 
+      = csrf_meta_tags 
+  %body
+    %header{:class => "navbar navbar-fixed-top navbar-inverse"}
+      .container
+        = link_to "sample app", root_path , id: "logo"
+      .nav
+        .ul
+          %li 
+            =link_to "Home",   root_path
+          %li 
+            =link_to "Help",   help_path
+          %li 
+            =link_to "Log in", '#'
+    .container
+      =yield
+  .footer
+    .small
+      The <a href="http://www.railstutorial.org/">Ruby on Rails Tutorial</a>
+      by <a href="http://www.michaelhartl.com/">Michael Hartl</a>
+    .nav
+      .ul
+        .li 
+          = link_to "About", about_path 
+        .li 
+          = link_to "Contact", contact_path 
+        .li 
+          = link_to "News", "http://news.railstutorial.org/"
 
