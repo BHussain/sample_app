@@ -10,6 +10,7 @@ gem 'turbolinks'
 gem 'jbuilder'
 gem 'sdoc'
 gem 'haml'
+gem 'devise'
 
 group :development, :test do
   gem 'sqlite3'
