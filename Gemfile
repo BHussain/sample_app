@@ -12,6 +12,8 @@ gem 'sdoc'
 gem 'haml'
 gem 'devise'
 gem 'bcrypt'
+gem 'will_paginate'
+gem 'bootstrap-will_paginate'
 
 group :development, :test do
   gem 'sqlite3'
