@@ -11,6 +11,7 @@ gem 'jbuilder'
 gem 'sdoc'
 gem 'haml'
 gem 'devise'
+gem 'bcrypt'
 
 group :development, :test do
   gem 'sqlite3'
